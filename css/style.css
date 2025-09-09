@@ -1,0 +1,179 @@
+/* Osnovni stilovi sajta */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------- */
+/* POSTOJEĆE TEME */
+/* ----------------------------- */
+
+/* Svijetla tema */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Tamna tema */
+body.dark {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* ----------------------------- */
+/* VLASTITE TEME */
+/* ----------------------------- */
+
+/* Plava tema */
+body.blue {
+    background-color: #e0f0ff;
+    color: #090544;
+}
+
+/* Zelena tema */
+body.green {
+    background-color: #e0ffe0;
+    color: #006600;
+}
+
+/* ----------------------------- */
+/* Header i Footer */
+header, footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #ccc;
+}
+
+/* Logo u headeru */
+header img {
+    width: 120px;       /* promeni broj po želji */
+    height: auto;       /* zadrži proporcije */
+    display: block;
+    margin: 0 auto 15px auto; /* centriranje i razmak ispod */
+}
+
+/* Navigacija */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+/* Hover efekat za linkove */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main sadržaj */
+main {
+    padding: 20px;
+}
+
+/* Sekcije (sat, kalendar, bookmark) */
+section {
+    margin-bottom: 30px;
+}
+
+/* Sat */
+#clock {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ddd;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Bookmark naslovi */
+h3 {
+    color: #444;
+    margin-top: 20px;
+}
+
+/* Forma */
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 5px;
+    margin-top: 3px;
+}
+
+form button {
+    cursor: pointer;
+}
+
+/* Slike u galeriji */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.no-border-gif {
+    display: block;
+    margin: 0 auto;       
+    border: none;         
+    background: transparent;
+}
+
+/* ----------------------------- */
+/* CLOCK + CALENDAR IN SAME ROW */
+#js-time-calendar {
+    display: flex;
+    justify-content: space-between; /* clock left, calendar right */
+    align-items: center;            /* vertically center */
+    width: 100%;                    /* ensure container spans full page width */
+    box-sizing: border-box;         /* include padding in width */
+    padding: 0 20px;                /* optional: space from edges */
+    margin-bottom: 30px;
+}
+
+#js-sat, #calendar-container {
+    /* Remove width restriction so items can fully align */
+    width: auto;
+}
+
+.inline-img:first-child {
+    margin-left: 100px;   /* push whole row away from the left edge */
+}
+
+.inline-img {
+    display: inline-block;
+    vertical-align: top; /* keeps them aligned */
+    margin-right: 100px;  /* space between them */
+}
+
+
+
+
+/* Galerija */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.page-card {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.page-card h3 {
+    margin-bottom: 10px;
+}
+
+.page-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
